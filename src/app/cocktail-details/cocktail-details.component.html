@@ -1,0 +1,26 @@
+<div class="filter-container" *ngIf="cocktail">
+  <div class="header-sec">
+  <mat-icon color="primary" (click)="goBack()">home</mat-icon><span>Back</span>
+  </div>
+ 
+  <div class="detail-section">
+    <img [src]="cocktail.imageUrl" alt="{{cocktail.name}}" class="detail-img">
+    <div class="detail-desc">
+      <p class="cocktail-font">{{ cocktail.name }}</p>
+      <span class="icon-star float-ing" [attr.id]="'star-' + cocktail.id" [class.active]="isFavCocktail()"
+        (click)="addCocktailFavorite()"></span>
+      <div class="rounded"
+        [ngClass]="{'text-bg-secondary': cocktail.isAlcoholic, 'text-bg-success': !cocktail.isAlcoholic}">
+        {{ cocktail.isAlcoholic ? "Alcoholic" : "Non Alcoholic" }}
+      </div>
+      <span class="cocktail-font" >Ingredients:</span>
+      <ul>
+        <li  *ngFor="let ing of cocktail.ingredients">
+          {{ing}}
+        </li>
+      </ul>
+      <div ><span class="cocktail-font" >Instructions:</span>{{cocktail.instructions}}
+      </div>
+    </div>
+  </div>
+</div>

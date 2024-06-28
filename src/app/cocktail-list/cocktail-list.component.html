@@ -1,0 +1,28 @@
+<div class="filter-container"> 
+  <mat-form-field appearance="outline" class="search-field"> 
+    <mat-label>Cocktail name</mat-label> 
+    <input matInput [(ngModel)]="filterText" (input)="applyFilter()"> 
+  </mat-form-field> </div> <div class="cocktail-list">
+  
+     <mat-card *ngFor="let cocktail of filteredCocktails">
+       <img mat-card-image [src]="cocktail.imageUrl" alt="{{cocktail.name}}">
+        <mat-card-content> 
+          <a [routerLink]="'/cocktails/' + cocktail.id">
+            <span class="cocktail-font">{{ cocktail.name }}</span>
+          </a> 
+          <span class="icon-star float-ing" [attr.id]="'star-' + cocktail.id" [class.active]="isFavCocktail(cocktail.id)"
+           (click)="addCocktailFavorite(cocktail.id)"></span>
+          <div class="rounded"
+          [ngClass]="{'text-bg-secondary': cocktail.isAlcoholic, 'text-bg-success': !cocktail.isAlcoholic}">
+        {{ cocktail.isAlcoholic ? "Alcoholic" : "Non Alcoholic" }}
+        </div>
+
+          <span class="card-text badge" *ngFor="let ingredient of cocktail.ingredients">
+              {{ingredient}} 
+          </span>
+          </mat-card-content>
+         </mat-card> 
+        </div>
+
+
+

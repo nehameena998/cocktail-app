@@ -1,0 +1,37 @@
+.filter-container { 
+    margin: 1em;
+ } 
+.cocktail-list { 
+    display: flex; flex-wrap: wrap; 
+    gap: 1em; 
+    justify-content: center; 
+} 
+mat-card {
+     width: 18.75em;
+    } 
+    mat-card img { 
+        height: 12.5em;
+        object-fit: cover; 
+    }
+    .search-field{
+       width: 100%; 
+    }
+    .error-toast {
+        background-color: #f44336;
+        color: white;
+      }
+      .badge:after{
+        content: '|';
+      }
+      .badge:last-child::after{
+        content: '';
+      }
+    
+      .float-ing{
+        float: right;
+        margin-top: 0.1em;
+      }
+      .cocktail-font{
+        font-weight: 600;
+        color: #0d0103;
+      }

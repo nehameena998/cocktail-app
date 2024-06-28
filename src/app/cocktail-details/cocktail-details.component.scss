@@ -1,0 +1,53 @@
+.filter-container {
+    margin: 16px;
+}
+
+.cocktail-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.float-ing {
+    float: right;
+    margin-top: 0.1em;
+}
+
+.detail-img {
+    display: block;
+    height: 200px;
+}
+
+.detail-section {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    border: 1px solid #a3a1a1;
+    border-radius: 12px;
+    position: relative;
+}
+
+.detail-desc {
+    margin-left: 15px;
+}
+
+.detail-section .icon-star {
+    font-size: 25px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.header-sec {
+    display: flex;
+    align-items: center;
+}
+
+.header-sec span{
+    padding-left: 5px;
+}
+.cocktail-font{
+    font-weight: 600;
+    color: #0d0103;
+  }
